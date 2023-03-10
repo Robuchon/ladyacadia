@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center text-center">
     <div name="intro" class="mt-20 flex flex-col items-center text-center">
-      <img src="IMG_0830_edited.webp" alt="" class="" />
+      <img src="/IMG_0830_edited.webp" alt="" class="" />
       <h1 class="mt-12 text-6xl font-black text-Gold">Lady Acadia</h1>
       <h2 class="mt-6 font-semibold">
         Mon esprit est seul maître de ma créativité et mes mains en sont les
@@ -27,7 +27,7 @@
         </p>
         <p class="mt-6 font-semibold">Ressentez, éprouvez, pensez...</p>
       </div>
-      <img src="3BAD9EFB-C636-41C0-A938-3A5FA9FAEEB7.webp" alt="" class="" />
+      <img src="/3BAD9EFB-C636-41C0-A938-3A5FA9FAEEB7.webp" alt="" class="" />
     </div>
   </div>
 </template>

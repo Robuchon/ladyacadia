@@ -40,31 +40,36 @@
       <TransitionChild
         as="template"
         enter="ease-out duration-500"
-        enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        enter-from="opacity-0 translate-y-8 sm:translate-y-0 sm:scale-85"
         enter-to="opacity-100 translate-y-0 sm:scale-100"
-        leave="ease-in duration-300"
+        leave="ease-in duration-500"
         leave-from="opacity-100 translate-y-0 sm:scale-100"
-        leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        leave-to="opacity-0 translate-y-8 sm:translate-y-0 sm:scale-85"
       >
         <div
-          class="fixed top-0 left-0 right-0 flex h-screen transform overflow-clip bg-white p-4 dura"
+          class="fixed top-0 left-0 right-0 flex transform overflow-clip bg-white"
           style="z-index: 9999; height: 100%; width: 100%"
         >
-          <div class="flex h-full w-full gap-4">
+          <div class="relative flex h-screen w-full justify-evenly px-4">
+            <XMarkIcon
+              class="absolute top-4 right-4 m-1 h-10 w-10 rounded-full p-1 text-gray-600 hover:border-2 hover:border-Anthracite hover:text-Anthracite"
+              aria-hidden="true"
+              @click="open = false"
+            />
+            <div class="max-w-3/4 my-auto">
+              <img
+                :src="imageTarget.src"
+                alt=""
+                class="max-h-screen w-[95%]"
+              />
+            </div>
             <div
-              class="w-full basis-2/3 bg-contain bg-center bg-no-repeat"
-              :class="'bg-[url(/HuTao.PNG)]'"
-            ></div>
-            <div class="basis-1/3 text-center">
+              class="basis-1/4 flex flex-col justify-center text-center"
+            >
               <div class="flex h-14 justify-end">
-                <XMarkIcon
-                  class="m-1 h-10 w-10 rounded-full p-1 text-gray-600 hover:border-2 hover:border-Anthracite hover:text-Anthracite"
-                  aria-hidden="true"
-                  @click="open = false"
-                />
               </div>
-              <h1>&gt; {{ imageTarget?.title }} &lt;</h1>
-              <p>{{ imageTarget?.txt }}</p>
+              <h1 class="">&gt; {{ imageTarget?.title }} &lt;</h1>
+              <p class="max-w-1/2">{{ imageTarget?.txt }}</p>
             </div>
           </div>
         </div>
@@ -75,6 +80,7 @@
 
 <script setup>
 import { ref } from "vue";
+
 import {
   Dialog,
   DialogPanel,
@@ -90,40 +96,34 @@ const imageTarget = ref("");
 
 const galerie = ref([
   {
-    src: "HuTao.PNG",
+    src: "/HuTao.PNG",
     title: "Hu Tao",
     txt: "L'amour vous à t-il déjà donné des ailes? La rose et son symbole 'amour... Transpercée par la flèche de Cupidon le coeur ne sait résister mais le sentiment en vaut la chandelle.",
   },
   {
-    src: "IMG_2351.PNG",
+    src: "/IMG_2351.PNG",
     title: "Astromancienne",
     txt: "",
   },
   {
-    src: "Holdingthemoon.PNG",
+    src: "/Holdingthemoon.PNG",
     title: "Holding the moon",
     txt: "",
   },
   {
-    src: "Meditation.PNG",
+    src: "/Meditation.PNG",
     title: "Meditation",
     txt: "",
   },
   {
-    src: "Themusicnymph.PNG",
+    src: "/Themusicnymph.PNG",
     title: "The music nymph",
     txt: "",
   },
   {
-    src: "Theforestdancers.PNG",
+    src: "/Theforestdancers.PNG",
     title: "The forest dancers",
     txt: "",
-  },
-
-  function onClose() {
-    if (!this.open) {
-      this.imageTarget = "";
-    }
   },
 ]);
 </script>

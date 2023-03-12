@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-20 flex gap-4">
+  <div class="mt-20 w-[80%] mx-auto flex gap-4">
     <div name="gauche" class="space-y-2">
       <div v-for="(image, index) in galerie" class="flex">
         <div

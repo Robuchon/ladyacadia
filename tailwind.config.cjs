@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         Anthracite: "#111111",
         Gold: "#937618",
-        Green: "#25AC76",
+        Green: "#24965E",
       }
     },
   },

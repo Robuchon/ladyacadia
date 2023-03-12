@@ -1,13 +1,36 @@
 <template>
   <div class="hero">
     <Snow class="icon-wrapper snow"></Snow>
+    <img
+      src="/Branche.PNG"
+      alt=""
+      name="solo"
+      class="absolute top-0 left-0 right-0 2xl:hidden"
+    />
+    <div class="absolute top-0 left-0 hidden h-auto w-screen 2xl:inline-block">
+      <div class="flex">
+        <img src="/Branche.PNG" name="left" alt="" class="w-[50%]" />
+        <img
+          src="/Branche.PNG"
+          name="right"
+          alt=""
+          class="w-[50%] -scale-x-100"
+        />
+      </div>
+    </div>
+
     <div class="hero__content mx-auto w-[90%]">
       <NavBar class="z-10"></NavBar>
       <RouterView />
       <Footer></Footer>
       <svg width="100" height="100" viewBox="0 0 100 100">
-  
-</svg>
+        <g
+          inkscape:label="Layer 1"
+          inkscape:groupmode="layer"
+          id="layer1"
+          transform="translate(-627.42315,-376.52517)"
+        ></g>
+      </svg>
     </div>
   </div>
 </template>
@@ -24,7 +47,7 @@ const body = ref(null);
 onMounted(() => {
   body.value = document.querySelector("body");
   icon.value = document.querySelector(".icon-wrapper");
-  const movementStrength = 25;
+  const movementStrength = 15;
   const height = movementStrength / window.innerHeight;
   const width = movementStrength / window.innerWidth;
   const bodyTrack = body.value;
@@ -58,8 +81,8 @@ onMounted(() => {
 }
 
 .hero {
-  background: radial-gradient(ellipse at center, #c8d9f2, #06192262),
-    radial-gradient(ellipse at bottom, #061922b4, #c8d9f2);
+  background: radial-gradient(circle at top, #ca961dab 1%, #96eefcb6 50%),
+    radial-gradient(circle at bottom, #81b822 15%, #93f1ff);
   min-height: 30rem;
   position: relative;
   overflow: hidden;
@@ -67,6 +90,7 @@ onMounted(() => {
   justify-content: center;
   align-content: center;
 }
+
 .snow {
   position: absolute;
   height: 100%;

@@ -1,22 +1,20 @@
 <template>
-    <div class="flex flex-col items-center max-w-[940px] mx-auto">
-    <div class="flex flex-col items-center" @click="goTo('Home')">
-        <img src="/IMG_1128.png" alt="" />
-        <h1 class="text-2xl font-light">Lady Acadia</h1>
-    </div>
-    <div class="bg-Anthracite max-w-[940px] w-[90%] h-0.5 my-6"></div>
+  <div class="mx-auto flex max-w-[940px] flex-col items-center">
+    <RouterLink class="flex flex-col items-center" to="/home">
+      
+        <img class="icon rounded-full" src="/IMG_1128.png" alt="" />
+      <h1 class="text-2xl font-light">Lady Acadia</h1>
+    </RouterLink>
+    <div class="my-6 h-0.5 w-[90%] max-w-[940px] bg-Anthracite"></div>
     <div class="flex space-x-4">
-        <RouterLink to="Home">Home</RouterLink>
-        <RouterLink to="Galerie">Galerie</RouterLink>
-        <RouterLink to="Contact">Contact</RouterLink>
+      <RouterLink to="/home">Home</RouterLink>
+      <RouterLink to="/galerie">Galerie</RouterLink>
+      <RouterLink to="/contact">Contact</RouterLink>
     </div>
-    </div>
+  </div>
 </template>
 
 <script setup>
-
 </script>
 
-<style lang="scss" scoped>
 
-</style>

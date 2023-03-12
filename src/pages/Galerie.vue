@@ -60,9 +60,9 @@
               alt=""
               class="mx-auto xl:mx-0 max-h-[80%] max-w-[90%]"
             />
-            <div class="flex flex-col justify-center text-center max-w-[25%]">
+            <div class="flex flex-col justify-center text-center w-[90%] md:max-w-[25%]">
               <h1 class="">&gt; {{ imageTarget?.title }} &lt;</h1>
-              <p class="max-w-1/2">{{ imageTarget?.txt }}</p>
+              <p class="">{{ imageTarget?.txt }}</p>
             </div>
           </div>
         </div>

@@ -6,14 +6,6 @@
       <NavBar class="z-10"></NavBar>
       <RouterView />
       <Footer></Footer>
-      <svg width="100" height="100" viewBox="0 0 100 100">
-        <g
-          inkscape:label="Layer 1"
-          inkscape:groupmode="layer"
-          id="layer1"
-          transform="translate(-627.42315,-376.52517)"
-        ></g>
-      </svg>
     </div>
   </div>
 </template>

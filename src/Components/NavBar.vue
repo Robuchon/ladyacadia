@@ -22,5 +22,5 @@
 <script setup></script>
 <style>
 .text-with-shadow-white {
-  text-shadow: 2px 2px 2px #ffffff;
+  text-shadow: 2px 2px 2px #000000;
 }</style>

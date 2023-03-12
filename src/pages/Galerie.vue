@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-20 w-[80%] mx-auto flex gap-4">
+  <div class="mx-auto mt-20 flex w-[80%] flex-col gap-4 md:flex-row">
     <div name="gauche" class="space-y-2">
       <div v-for="(image, index) in galerie" class="flex">
         <div
@@ -40,34 +40,27 @@
       <TransitionChild
         as="template"
         enter="ease-out duration-500"
-        enter-from="opacity-0 translate-y-8 sm:translate-y-0 sm:scale-85"
+        enter-from="opacity-0 translate-y-8 sm:translate-y-0 "
         enter-to="opacity-100 translate-y-0 sm:scale-100"
         leave="ease-in duration-500"
         leave-from="opacity-100 translate-y-0 sm:scale-100"
-        leave-to="opacity-0 translate-y-8 sm:translate-y-0 sm:scale-85"
+        leave-to="opacity-0 translate-y-8 sm:translate-y-0"
       >
         <div
-          class="fixed top-0 left-0 right-0 flex transform overflow-clip bg-white"
-          style="z-index: 9999; height: 100%; width: 100%"
+          class="fixed top-0 left-0 right-0 bottom-0 z-20 flex overflow-hidden bg-white"
         >
-          <div class="relative flex h-screen w-full justify-evenly px-4">
+          <div class="relative flex h-full w-full flex-col items-center xl:flex-row justify-evenly">
             <XMarkIcon
               class="absolute top-4 right-4 m-1 h-10 w-10 rounded-full p-1 text-gray-600 hover:border-2 hover:border-Anthracite hover:text-Anthracite"
               aria-hidden="true"
               @click="open = false"
             />
-            <div class="max-w-3/4 my-auto">
-              <img
-                :src="imageTarget.src"
-                alt=""
-                class="max-h-screen w-[95%]"
-              />
-            </div>
-            <div
-              class="basis-1/4 flex flex-col justify-center text-center"
-            >
-              <div class="flex h-14 justify-end">
-              </div>
+            <img
+              :src="imageTarget.src"
+              alt=""
+              class="mx-auto xl:mx-0 max-h-[80%] max-w-[90%]"
+            />
+            <div class="flex flex-col justify-center text-center max-w-[25%]">
               <h1 class="">&gt; {{ imageTarget?.title }} &lt;</h1>
               <p class="max-w-1/2">{{ imageTarget?.txt }}</p>
             </div>

@@ -1,24 +1,7 @@
 <template>
   <div class="hero">
     <Snow class="icon-wrapper snow"></Snow>
-    <img
-      src="brancheTop.png"
-      alt=""
-      name="solo"
-      class="absolute top-0 left-0 right-0 2xl:hidden"
-    />
-    <div class="absolute top-0 left-0 hidden h-auto w-screen 2xl:inline-block">
-      <div class="flex">
-        <img src="brancheTop.png" name="left" alt="" class="w-[50%]" />
-        <img
-          src="brancheTop.png"
-          name="right"
-          alt=""
-          class="w-[50%] -scale-x-100"
-        />
-      </div>
-    </div>
-
+    <TopImage></TopImage>
     <div class="hero__content mx-auto w-[90%]">
       <NavBar class="z-10"></NavBar>
       <RouterView />
@@ -40,6 +23,7 @@ import NavBar from "./Components/NavBar.vue";
 import Footer from "./Components/Footer.vue";
 import Snow from "./Components/Snow.vue";
 import { ref, onMounted } from "vue";
+import TopImage from "./Components/TopImage.vue";
 
 const icon = ref(null);
 const body = ref(null);

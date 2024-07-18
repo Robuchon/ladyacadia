@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center text-center">
     <div name="intro" class="mt-20 flex flex-col items-center text-center">
       <img src="/IMG_0830_edited.webp" alt="" class="" />
-      <h1 class="mt-12 text-6xl font-black text-Gold">Lady Acadia</h1>
+      <h1 class="mt-12 text-6xl font-black text-Orange">Lady Acadia</h1>
       <h2 class="mt-6 font-semibold">
         Mon esprit est seul maître de ma créativité et mes mains en sont les
         actrices
@@ -10,7 +10,7 @@
     </div>
     <div name="propos" class="mt-20 md:flex text-left">
       <div class="flex flex-col justify-between min-w-1/2 max-w-[600px] px-4">
-        <h1 class="text-6xl font-black">À propos</h1>
+        <h1 class="text-6xl font-black text-Gray">À propos</h1>
         <p class="mt-6 font-semibold">
           Mon art à une fâcheuse tendance à puiser l’inspiration dans l’esprit
           torturé qui est le mien. Que ce soit de la joie, du curieux ou du

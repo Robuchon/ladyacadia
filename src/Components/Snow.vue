@@ -80,6 +80,7 @@
 import { ref } from "vue";
 
 const layerBottom = ref(30);
+
 function transalteFuntcion() {
   const x = Math.floor(Math.random() * 1024) + 1;
   const y = Math.floor(Math.random() * 1536) + 1;

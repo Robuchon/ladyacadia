@@ -21,6 +21,26 @@ let routes = [
     component: () => import("@pages/Galerie.vue"),
   },
   {
+    path: "/tarot",
+    name: "Tarot",
+    component: () => import("@pages/Tarot.vue"),
+  },
+  {
+    path: "/challenges",
+    name: "Challenges",
+    component: () => import("@pages/Challenges.vue"),
+  },
+  {
+    path: "/produit",
+    name: "Produit",
+    component: () => import("@pages/Produit.vue"),
+  },
+  {
+    path: "/blog",
+    name: "Blog",
+    component: () => import("@pages/Blog.vue"),
+  },
+  {
     path: "/waiting",
     name: "Waiting",
     component: () => import("@pages/Waiting.vue"),

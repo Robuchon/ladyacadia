@@ -12,15 +12,18 @@
     </RouterLink>
     <div class="my-6 h-0.5 w-[90%] max-w-[940px] bg-Orange"></div>
     <div class="space-x-4 bg-white rounded-full px-4 bg-opacity-90">
-      <RouterLink class="text-with-shadow text-center text-2xl font-normal text-black" to="/home">Home</RouterLink>
-      <RouterLink class="text-with-shadow text-center text-2xl font-normal text-black" to="/galerie">Galerie</RouterLink>
-      <RouterLink class="text-with-shadow text-center text-2xl font-normal text-black" to="/contact">Contact</RouterLink>
+      <RouterLink class="text-with-shadow text-center text-2xl font-normal" :class="router.currentRoute.value.path === '/home'? 'text-Gray cursor-not-allowed':'text-black'" to="/home">Home</RouterLink>
+      <RouterLink class="text-with-shadow text-center text-2xl font-normal" :class="router.currentRoute.value.path === '/galerie'? 'text-Gray cursor-not-allowed':'text-black'" to="/galerie">Galerie</RouterLink>
+      <RouterLink class="text-with-shadow text-center text-2xl font-normal" :class="router.currentRoute.value.path === '/tarot'? 'text-Gray cursor-not-allowed':'text-black'" to="/tarot">Tarot</RouterLink>
+      <RouterLink class="text-with-shadow text-center text-2xl font-normal" :class="router.currentRoute.value.path === '/produit'? 'text-Gray cursor-not-allowed':'text-black'" to="/produit">Produit</RouterLink>
+      <RouterLink class="text-with-shadow text-center text-2xl font-normal" :class="router.currentRoute.value.path === '/challenges'? 'text-Gray cursor-not-allowed':'text-black'" to="/challenges">Challenges</RouterLink>
+      <RouterLink class="text-with-shadow text-center text-2xl font-normal" :class="router.currentRoute.value.path === '/contact'? 'text-Gray cursor-not-allowed':'text-black'" to="/contact">Contact</RouterLink>
     </div>
   </div>
 </template>
 
 <script setup>
-
+import router from "@router";
 </script>
 <style>
 

@@ -16,9 +16,9 @@ let routes = [
     component: () => import("@pages/Contact.vue"),
   },
   {
-    path: "/galerie",
-    name: "Galerie",
-    component: () => import("@pages/Galerie.vue"),
+    path: "/illustrations",
+    name: "Illustrations",
+    component: () => import("@pages/Illustrations.vue"),
   },
   {
     path: "/tarot",
@@ -39,6 +39,11 @@ let routes = [
     path: "/blog",
     name: "Blog",
     component: () => import("@pages/Blog.vue"),
+  },
+  {
+    path: "/crud",
+    name: "Crud",
+    component: () => import("@pages/Crud.vue"),
   },
   {
     path: "/waiting",

@@ -79,7 +79,7 @@
       </TransitionRoot>
     </div>
     <div v-else name="galerieDigital" class="mx-auto flex w-[90%] flex-col gap-4 md:flex-row">
-      <div name="gauche" class="space-y-1 md:w-1/3">
+      <div name="gauche" class="space-y-1 flex-1">
         <div v-for="(image, index) in galerieBis" class="flex">
           <div v-if="index % 3 === 0" class="relative my-auto" @click="(open = true), (imageTarget = image)">
             <div class="image-container">
@@ -92,7 +92,7 @@
           </div>
         </div>
       </div>
-      <div name="centre" class="-mt-1 space-y-1 md:w-1/3">
+      <div name="centre" class="-mt-1 space-y-1 flex-1">
         <div v-for="(image, index) in galerie" class="flex">
           <div v-if="index % 3 === 1" class="relative my-auto" @click="(open = true), (imageTarget = image)">
             <div class="image-container">
@@ -105,7 +105,7 @@
           </div>
         </div>
       </div>
-      <div name="droite" class="-mt-2 space-y-1 md:w-1/3">
+      <div name="droite" class="-mt-2 space-y-1  flex-1">
         <div v-for="(image, index) in galerie" class="flex">
           <div v-if="index % 3 === 2" class="relative my-auto" @click="(open = true), (imageTarget = image)">
             <div class="image-container">

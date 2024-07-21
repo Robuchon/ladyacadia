@@ -1,13 +1,10 @@
 <template>
-    <div>
-<h1>Notfound</h1>
+    <div class="flex flex-col items-center text-center">
+      <h1>Not found</h1>
     </div>
-</template>
-
-<script setup>
-
-</script>
-
-<style lang="scss" scoped>
-
-</style>
+  </template>
+  
+  <script setup></script>
+  
+  <style lang="scss" scoped></style>
+  

@@ -11,7 +11,7 @@
         target="_blank"
       >
         <span class="sr-only">{{ navigation[0].name }}</span>
-        <Linkedin height="24" width="24"></Linkedin>
+        <Linkedin :height="24" :width="24"></Linkedin>
       </a>
     </div>
     <p class="mx-auto flex-1 text-center">©2020-2024 pour Lady Acadia.</p>
@@ -23,7 +23,7 @@
         target="_blank"
       >
         <span class="sr-only">{{ navigation[1].name }}</span>
-        <Instagram height="24" width="24"></Instagram>
+        <Instagram :height="24" :width="24"></Instagram>
       </a>
       <a
         :key="navigation[2].name"
@@ -32,7 +32,7 @@
         target="_blank"
       >
         <span class="sr-only">{{ navigation[2].name }}</span>
-        <Youtube height="24" width="24"></Youtube>
+        <Youtube :height="24" :width="24"></Youtube>
       </a>
     </div>
   </div>

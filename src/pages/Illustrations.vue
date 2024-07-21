@@ -80,40 +80,40 @@
     </div>
     <div v-else name="galerieDigital" class="mx-auto flex w-[90%] flex-col gap-4 md:flex-row">
       <div name="gauche" class="space-y-1 flex-1">
-        <div v-for="(image, index) in galerieBis" class="flex">
+        <div v-for="(image, index) in artDigitalTXT.fr" class="flex">
           <div v-if="index % 3 === 0" class="relative my-auto" @click="(open = true), (imageTarget = image)">
             <div class="image-container">
               <h1
                 class="overlay  z-10 text-center text-4xl font-semibold text-Green bg-white rounded-full px-4 py-2 bg-opacity-90">
                 &gt; {{ image.title }} &lt;
               </h1>
-              <img class="image" :src="image.src" alt="" />
+              <img class="image w-full" :src="urlBaseImg + image.src" :alt="image.desc" />
             </div>
           </div>
         </div>
       </div>
       <div name="centre" class="-mt-1 space-y-1 flex-1">
-        <div v-for="(image, index) in galerie" class="flex">
+        <div v-for="(image, index) in artDigitalTXT.fr" class="flex">
           <div v-if="index % 3 === 1" class="relative my-auto" @click="(open = true), (imageTarget = image)">
             <div class="image-container">
               <h1
                 class="overlay  z-10 text-center text-4xl font-semibold text-Green bg-white rounded-full px-4 py-2 bg-opacity-90">
                 &gt; {{ image.title }} &lt;
               </h1>
-              <img class="image" :src="image.src" alt="" />
+              <img class="image" :src="urlBaseImg + image.src" :alt="image.desc" />
             </div>
           </div>
         </div>
       </div>
       <div name="droite" class="-mt-2 space-y-1  flex-1">
-        <div v-for="(image, index) in galerie" class="flex">
+        <div v-for="(image, index) in artDigitalTXT.fr" class="flex">
           <div v-if="index % 3 === 2" class="relative my-auto" @click="(open = true), (imageTarget = image)">
             <div class="image-container">
               <h1
                 class="overlay  z-10 text-center text-4xl font-semibold text-Green bg-white rounded-full px-4 py-2 bg-opacity-90">
                 &gt; {{ image.title }} &lt;
               </h1>
-              <img class="image" :src="image.src" alt="" />
+              <img class="image" :src="urlBaseImg + image.src" :alt="image.desc" />
             </div>
           </div>
         </div>
@@ -128,10 +128,10 @@
               <XMarkIcon
                 class="absolute top-4 right-4 m-1 h-10 w-10 rounded-full p-1 text-gray-600 hover:border-2 hover:border-Anthracite hover:text-Anthracite"
                 aria-hidden="true" @click="close()"/>
-              <img :src="imageTarget.src" alt="" class="mx-auto lg:mx-0 max-h-[80%] max-w-[90%]" />
+              <img :src="urlBaseImg + imageTarget.src" :alt="imageTarget.desc" class="mx-auto lg:mx-0 max-h-[80%] max-w-[90%]" />
               <div class="flex flex-col justify-center text-center w-[90%] md:max-w-[25%] min-h-[20%]">
                 <h1 class="">&gt; {{ imageTarget?.title }} &lt;</h1>
-                <p class="">{{ imageTarget?.txt }}</p>
+                <p class="whitespace-pre-line">{{ imageTarget?.txt }}</p>
               </div>
             </div>
           </div>
@@ -152,9 +152,13 @@ import {
 
 import { XMarkIcon } from "@heroicons/vue/24/outline";
 
+import artDigitalTXT from "../../public/artDigital";
+
 const open = ref(false);
 const select = ref(true);
 const imageTarget = ref("");
+const urlBaseImg = ref(import.meta.env.VITE_YOUR_R2ADRESSIMG);
+
 const galerie = ref([
   {
     src: "/HuTao.PNG",
@@ -184,38 +188,6 @@ const galerie = ref([
   {
     src: "/Theforestdancers.PNG",
     title: "The forest dancers",
-    txt: "",
-  },
-]);
-const galerieBis = ref([
-
-  {
-    src: "/Meditation.PNG",
-    title: "Meditation",
-    txt: "",
-  },
-  {
-    src: "/Themusicnymph.PNG",
-    title: "The music nymph",
-    txt: "",
-  },
-  {
-    src: "/Theforestdancers.PNG",
-    title: "The forest dancers",
-    txt: "",
-  }, {
-    src: "/HuTao.PNG",
-    title: "Hu Tao",
-    txt: "L'amour vous à t-il déjà donné des ailes? La rose et son symbole 'amour... Transpercée par la flèche de Cupidon le coeur ne sait résister mais le sentiment en vaut la chandelle.",
-  },
-  {
-    src: "/IMG_2351.PNG",
-    title: "Astromancienne",
-    txt: "",
-  },
-  {
-    src: "/Holdingthemoon.PNG",
-    title: "Holding the moon",
     txt: "",
   },
 ]);

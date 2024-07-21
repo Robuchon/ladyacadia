@@ -21,13 +21,13 @@
             <span class="sr-only">{{ item.name }}</span>
             <Instagram
               v-if="item.name === 'Instagram'"
-              height="24"
-              width="24"
+              :height="24"
+              :width="24"
             ></Instagram>
             <Youtube
               v-if="item.name === 'Youtube'"
-              height="24"
-              width="24"
+              :height="24"
+              :width="24"
             ></Youtube>
           </a>
         </div>

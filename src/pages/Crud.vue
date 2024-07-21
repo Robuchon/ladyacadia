@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <h1>ICI on va crud</h1>
-    <p>faut deja faire un petut upload d'image pour voir si tout fonctionne</p>
+  <div class="flex flex-col items-center text-center">
+    <h1>CRUD</h1>
   </div>
 </template>
 

@@ -2,6 +2,7 @@
   <div class="flex flex-col items-center text-center">
     <div name="intro" class="mt-20 flex flex-col items-center text-center">
       <img src="/IMG_0830_edited.webp" alt="" class="" />
+      <img src="https://940c809c3437a3496c0f893153eea77a.r2.cloudflarestorage.com/image/Dreamoflife.webp" alt="" class="" />
       <h1 class="mt-12 text-6xl font-black text-Orange">Lady Acadia</h1>
       <h2 class="mt-6 font-semibold">
         Mon esprit est seul maître de ma créativité et mes mains en sont les

@@ -79,6 +79,7 @@
       </TransitionRoot>
     </div>
     <div v-else name="galerieDigital" class="mx-auto flex w-[90%] flex-col gap-4 md:flex-row">
+      <p>{{ artDigitalTXT }}</p>
       <div name="gauche" class="space-y-1 flex-1">
         <div v-for="(image, index) in artDigitalTXT.fr" class="flex">
           <div v-if="index % 3 === 0" class="relative my-auto" @click="(open = true), (imageTarget = image)">
@@ -142,8 +143,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { Switch } from "@headlessui/vue";
+import ManageTxt from "../plugins/axios/manageTxt";
 
 import {
   TransitionChild,
@@ -152,12 +154,12 @@ import {
 
 import { XMarkIcon } from "@heroicons/vue/24/outline";
 
-import artDigitalTXT from "../../public/artDigital";
-
 const open = ref(false);
 const select = ref(true);
 const imageTarget = ref("");
 const urlBaseImg = ref(import.meta.env.VITE_YOUR_R2ADRESSIMG);
+
+const artDigitalTXT = ref("")
 
 const galerie = ref([
   {
@@ -192,9 +194,19 @@ const galerie = ref([
   },
 ]);
 
+async function readTxt(){
+  let result = await ManageTxt.artDigitalTxt()
+  console.log(result);
+  artDigitalTXT.value = result
+}
+
 function close() {
   open.value = false
 }
+
+onMounted(async () => {
+  readTxt();
+});
 </script>
 
 <style>

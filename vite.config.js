@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from "url";
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,9 +12,8 @@ export default defineConfig({
       "@router": fileURLToPath(
         new URL("./src/plugins/router", import.meta.url),
       ),
-      "@pages": fileURLToPath(
-        new URL("./src/pages", import.meta.url),
-      ),
+      "@axios": fileURLToPath(new URL("./src/plugins/axios", import.meta.url)),
+      "@pages": fileURLToPath(new URL("./src/pages", import.meta.url)),
     },
   },
-})
+});

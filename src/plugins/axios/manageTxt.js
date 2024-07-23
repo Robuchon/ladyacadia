@@ -1,8 +1,8 @@
 import Base from "@axios/axios";
 
 class ManageTxt {
-  static async artDigitalTxt() {
-    return Base.txt.get(`/artDigital.js`)
+  static async artDigitalTxt(fileName) {
+    return Base.txt.get(fileName)
       .then((response) => {
         console.log("Recup des text art digital");
         return response;

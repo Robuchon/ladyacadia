@@ -145,7 +145,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { Switch } from "@headlessui/vue";
-import ManageTxt from "../plugins/Axios/manageTxt";
+import ManageTxt from "@axios/manageTxt";
 
 import {
   TransitionChild,

@@ -78,10 +78,10 @@
         </TransitionChild>
       </TransitionRoot>
     </div>
-    <div v-else name="galerieDigital" class="mx-auto flex w-[90%] flex-col gap-4 md:flex-row">
-      <div name="gauche" class="space-y-1 flex-1">
-        <div v-for="(image, index) in artDigitalTXT.fr" class="flex">
-          <div v-if="index % 3 === 0" class="relative my-auto" @click="(open = true), (imageTarget = image)">
+    <div v-else name="galerieDigital" class="mx-auto w-[90%]">
+      <div name="petit" class="block md:hidden space-y-4">
+        <div v-for="image in artDigitalTXT.fr" class="flex">
+          <div class="relative my-auto" @click="(open = true), (imageTarget = image)">
             <div class="image-container">
               <h1
                 class="overlay  z-10 text-center text-4xl font-semibold text-Green bg-white rounded-full px-4 py-2 bg-opacity-90">
@@ -92,32 +92,48 @@
           </div>
         </div>
       </div>
-      <div name="centre" class="-mt-1 space-y-1 flex-1">
-        <div v-for="(image, index) in artDigitalTXT.fr" class="flex">
-          <div v-if="index % 3 === 1" class="relative my-auto" @click="(open = true), (imageTarget = image)">
-            <div class="image-container">
-              <h1
-                class="overlay  z-10 text-center text-4xl font-semibold text-Green bg-white rounded-full px-4 py-2 bg-opacity-90">
-                &gt; {{ image.title }} &lt;
-              </h1>
-              <img class="image" :src="urlBaseImg + image.src" :alt="image.desc" />
+      <div name="grand" class="hidden md:flex gap-4">
+        <div name="gauche" class="space-y-1 flex-1">
+          <div v-for="(image, index) in artDigitalTXT.fr" class="flex">
+            <div v-if="index % 3 === 0" class="relative my-auto" @click="(open = true), (imageTarget = image)">
+              <div class="image-container">
+                <h1
+                  class="overlay  z-10 text-center text-4xl font-semibold text-Green bg-white rounded-full px-4 py-2 bg-opacity-90">
+                  &gt; {{ image.title }} &lt;
+                </h1>
+                <img class="image w-full" :src="urlBaseImg + image.src" :alt="image.desc" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div name="centre" class="-mt-1 space-y-1 flex-1">
+          <div v-for="(image, index) in artDigitalTXT.fr" class="flex">
+            <div v-if="index % 3 === 1" class="relative my-auto" @click="(open = true), (imageTarget = image)">
+              <div class="image-container">
+                <h1
+                  class="overlay  z-10 text-center text-4xl font-semibold text-Green bg-white rounded-full px-4 py-2 bg-opacity-90">
+                  &gt; {{ image.title }} &lt;
+                </h1>
+                <img class="image" :src="urlBaseImg + image.src" :alt="image.desc" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div name="droite" class="-mt-2 space-y-1  flex-1">
+          <div v-for="(image, index) in artDigitalTXT.fr" class="flex">
+            <div v-if="index % 3 === 2" class="relative my-auto" @click="(open = true), (imageTarget = image)">
+              <div class="image-container">
+                <h1
+                  class="overlay  z-10 text-center text-4xl font-semibold text-Green bg-white rounded-full px-4 py-2 bg-opacity-90">
+                  &gt; {{ image.title }} &lt;
+                </h1>
+                <img class="image" :src="urlBaseImg + image.src" :alt="image.desc" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div name="droite" class="-mt-2 space-y-1  flex-1">
-        <div v-for="(image, index) in artDigitalTXT.fr" class="flex">
-          <div v-if="index % 3 === 2" class="relative my-auto" @click="(open = true), (imageTarget = image)">
-            <div class="image-container">
-              <h1
-                class="overlay  z-10 text-center text-4xl font-semibold text-Green bg-white rounded-full px-4 py-2 bg-opacity-90">
-                &gt; {{ image.title }} &lt;
-              </h1>
-              <img class="image" :src="urlBaseImg + image.src" :alt="image.desc" />
-            </div>
-          </div>
-        </div>
-      </div>
+
       <TransitionRoot as="template" :show="open">
         <TransitionChild as="template" enter="ease-out duration-500"
           enter-from="opacity-0 translate-y-8 sm:translate-y-0 " enter-to="opacity-100 translate-y-0 sm:scale-100"
@@ -203,7 +219,7 @@ async function readTxt() {
       count = 5
     } catch (e) {
       console.log(e);
-      count ++
+      count++
     }
 
   }

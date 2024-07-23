@@ -10,7 +10,7 @@
         </h1>
       
     </RouterLink>
-    <div class="flex justify-center space-x-6 mt-2">
+    <div class="flex justify-center space-x-6 mt-2 rounded-full bg-white bg-opacity-90 p-2">
           <a
             v-for="item in social"
             :key="item.name"
@@ -55,7 +55,7 @@
                       : 'text-black'
                   "
                 >
-                  <span class="hidden text-inherit md:block">
+                  <span class=" text-inherit block">
                     {{ item.name }}
                   </span>
                 </router-link>
@@ -74,7 +74,7 @@
                         : 'text-black'
                     "
                   >
-                    <span class="hidden text-inherit md:block">
+                    <span class="text-inherit block">
                       {{ item.name }}
                     </span>
                   </p>

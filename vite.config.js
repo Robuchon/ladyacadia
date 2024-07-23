@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [vue()],
   define: {
     global: {},
-    _global: ({}),
+    _global: {},
   },
   resolve: {
     alias: {
